@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>iCal Generator</title>
+        <link data-require="bootstrap-glyphicons@*" data-semver="3.2.1" rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/img/glyphicons-halflings.png" />
+        <link data-require="bootstrap-css@*" data-semver="3.3.1" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+        <link data-require="font-awesome@4.3.0" data-semver="4.3.0" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+
+        <link rel="stylesheet" href="https://cdn.rawgit.com/smalot/bootstrap-datetimepicker/master/css/bootstrap-datetimepicker.css" />
+        <link rel="stylesheet" href="style.css" />
+        <script data-require="jquery@2.1.4" data-semver="2.1.4" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script data-require="bootstrap@3.3.2" data-semver="3.3.2" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        <script src="https://cdn.rawgit.com/smalot/bootstrap-datetimepicker/master/js/bootstrap-datetimepicker.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
+        <script src="script.js"></script>
+    </head>
+
+    <body>
+    <div class="container">
+        <h1>iCal Generator</h1>
+        <div>
+            <form id="iCal-form" name="iCal-form">
+                <div class="form-group">
+                    <label for="userEmail">Email address</label>
+                    <input type="email" class="form-control" id="userEmail" placeholder="Email" />
+                </div>
+                <div class="form-group">
+                    <label for="appointmentLocation">Appointment Location</label>
+                    <input type="text" class="form-control" id="appointmentLocation" placeholder="Appointment location" />
+                </div>
+                <div class="form-group">
+                    <div class="input-append date form_datetime">
+                        <label for="appointmentDateTime">Appointment Date & Time</label>
+                        <input id='appointmentDateTime' type="text" value="" readonly="" class='form-control' />
+              <span class="add-on">
+                <i class="icon-th"></i>
+              </span>
+                    </div>
+                    <script type="text/javascript">
+                        $(".form_datetime").datetimepicker({
+                            format: "yyyy-mm-dd hh:ii"
+                        });
+                    </script>
+                </div>
+                <div class="form-group">
+                    <label for="messageBody">Message Body</label>
+                    <textarea class="form-control" id="messageBody" name="messageBody" rows="3"></textarea>
+                </div>
+                <button id="iCal-submit" type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div>
+    </div>
+    </body>
+
+    </html>

@@ -1,0 +1,11 @@
+{
+  "name": "add-to-cal",
+  "version": "1.0.0",
+  "description": "Add to Calendar demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Shayne Meyer <shayne.meyer@providence.org>",
+  "license": "MIT"
+}
